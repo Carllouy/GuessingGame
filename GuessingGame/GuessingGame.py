@@ -26,10 +26,10 @@ def play_Game(limit):
                 guessed_Correctly = True
         except ValueError:    
             print("Please enter a valid number")
-    
+
 def main():
     display_Heading()
-    
+
 while True:
     try:
         limit = int(input("Enter the higest number for your guessing range: "))
