@@ -36,9 +36,15 @@ while True:
     except ValueError:
         print("Enter a valid number.")
         continue
-    play_again = input("Play again? (yes/no): ").strip().lower()
-if play_again != 'yes':
-    print("Good bye")
+
+while True:
+    play_again = input("play again? yes/no: ").strip().lower()
+    if play_again in ['yes', 'y']:
+        break
+    elif play_again in ['no', 'n']:
+        print("Goodbye")
+    else:
+        print("please enter a 'yes' or 'no'.")
 
 if __name__ == "__main__":
     main()
