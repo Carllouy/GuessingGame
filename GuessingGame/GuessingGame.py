@@ -11,15 +11,19 @@ def display_Heading():
 def play_Game(limit):
     number_to_guess = random.randint(1, limit)
     print(f"I am thinking of a number between 1 and {limit}.")
+
+    guessed_Correctly = False
     
-    while True:
+    while not guessed_Correctly:
         try:    
             guess = int(input("Take a guess: "))
             if guess < number_to_guess:
                 print("Too Low. Take another Guess")
             elif guess > number_to_guess:
                 print("Too High. Take another Guess")
-                break
+            else:
+                print("You guessed correctly")
+                guessed_Correctly = True
         except ValueError:    
             print("Please enter a valid number")
     
